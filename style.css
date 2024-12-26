@@ -22,8 +22,8 @@ body {
 }
 
 @keyframes loveColors {
-  0% {
-    color: rgb(0, 0, 0); /* اللون الأسود */
+  0%, 50%, 100% {
+    color: black; /* اللون الأسود الثابت */
   }
   }
 }
