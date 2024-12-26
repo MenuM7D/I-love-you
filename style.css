@@ -96,6 +96,25 @@ body {
   z-index: 20;
   pointer-events: none;
 }
+/* style.css */
+#message-popup {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  animation: colorChange 3s infinite alternate;
+}
+
+@keyframes colorChange {
+  0% {
+    color: rgb(255, 105, 180); /* اللون الوردي */
+  }
+  50% {
+    color: rgb(255, 0, 0); /* اللون الأحمر */
+  }
+  100% {
+    color: rgb(139, 0, 139); /* اللون الوردي الغامق */
+  }
+}
 
 @keyframes blackholeAnim {
   0% {
