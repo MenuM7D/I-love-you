@@ -35,27 +35,16 @@ blackhole.addEventListener('click', () => {
 
   // تعيين الخلفية نفسها وتغيير اللون للنص إلى الأسود
   loveMessage.style.backgroundImage = "url('https://i.ibb.co/x7Pbt6L/Screenshot.jpg')";
-loveMessage.style.backgroundSize = "cover";  // تغطي المساحة بالكامل
-loveMessage.style.backgroundPosition = "center";  // تركز الصورة في المنتصف
-loveMessage.style.backgroundAttachment = "fixed";  // تثبيت الصورة أثناء التمرير
-loveMessage.style.borderRadius = "10px";
-loveMessage.style.padding = "10px";
-loveMessage.style.color = "black";  // تغيير النص إلى اللون الأسود
+  loveMessage.style.backgroundSize = "cover";
+  loveMessage.style.backgroundPosition = "center";
+  loveMessage.style.borderRadius = "10px";
+  loveMessage.style.padding = "10px";
+  loveMessage.style.color = "black"; // تغيير النص إلى اللون الأسود
 
-// التعامل مع الأجهزة المحمولة عبر media queries
-loveMessage.style.display = 'block';
+  document.body.appendChild(loveMessage);
+  loveMessage.style.display = 'block';
+});
 
-document.body.appendChild(loveMessage);
-
-// إضافة media query للتأكد من التناسق على الأجهزة المختلفة
-let style = document.createElement('style');
-style.innerHTML = `
-  @media (max-width: 768px) {
-    loveMessage.style.backgroundAttachment = "scroll";  // تعطيل التثبيت على الأجهزة المحمولة
-    loveMessage.style.backgroundSize = "cover";
-  }
-`;
-document.head.appendChild(style);
 // وظيفة الفقاعات
 function createBubble(message) {
   const bubble = document.createElement('div');
