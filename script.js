@@ -19,7 +19,7 @@ const body = document.querySelector('body');
 // تأثير الثقب الأسود
 blackhole.addEventListener('click', () => {
   document.body.innerHTML = '';
-  body.style.backgroundImage = "url('https://i.ibb.co/x7Pbt6L/Screenshot.jpg')";
+  body.style.backgroundImage = "url('https://i.ibb.co/sqZj7tP/copilot-image-1735173020322.jpg')";
 
   const loveMessage = document.createElement('div');
   loveMessage.classList.add('popup');
