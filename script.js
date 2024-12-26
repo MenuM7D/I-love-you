@@ -2,47 +2,39 @@ const messages = [
   "💘🔥 أعشقكِ بجنون 💖🌹",
 ];
 
+const container = document.querySelector('.bubble-container');
+const blackhole = document.querySelector('.blackhole');
 const body = document.querySelector('body');
 
 // تأثير الثقب الأسود
-document.querySelector('.blackhole').addEventListener('click', () => {
-  document.body.innerHTML = ''; // مسح محتوى الصفحة لتكون الخلفية هي العنصر الوحيد
+blackhole.addEventListener('click', () => {
+  document.body.innerHTML = '';
+  body.style.backgroundImage = "url('https://i.ibb.co/CK2Hx00/f5da5f7fd5f3d81fabb18d7a6161c637.jpg')";
 
-  // تعيين الخلفية الكاملة للصورة
-  body.style.backgroundImage = "url('https://i.ibb.co/x7Pbt6L/Screenshot.jpg')";
-  body.style.backgroundSize = "cover"; // جعل الصورة تغطي كامل الشاشة
-  body.style.backgroundPosition = "center"; // ضبط الصورة في المركز
-  body.style.height = "100vh"; // تأكد من أن الخلفية تغطي كامل العرض والارتفاع
-  body.style.margin = "0"; // إزالة الهوامش الافتراضية
-
-  // إنشاء نافذة منبثقة تحتوي على نص الرسالة في جميع المساحة
   const loveMessage = document.createElement('div');
   loveMessage.classList.add('popup');
-  loveMessage.innerText = "💘🔥 أعشقكِ بجنون 💖🌹"; // النص
+  loveMessage.innerText = "احم احم بصي يا اغلي ما ليا يا احلي بنوته واحلي ماما واحلي بيست واحلي حبيبه واحلل كل حاجه حرفيا انا عملت الموقع دا عشان افاجئك بي يعني هو كلو عل بعضو عملو كمفاجئه قولت استغل بقا ام النا بتعلمه دا في حاجه تفرح حد بحبه بدل الهبل الي مش جايبلي منها حاجه دا المهم بموت فيكي يا بت يارب يعجبك عشان بجد انا مش عامله بمجهود ولا حاجه انا عملو بقلبي عشان عايز اقولق واوصلك من خلاله اني بحبك موت ومقدرش اعيش من غيرك ومهما غيبت عليكي في يوم اعرفي ان دي حاجه غصبن عني اصلا مش بأيدي بجد عمري ما هتخلي عنك في يوم ولا هبعد عنك انتي قبل متكوني حبيبتي انتي حياتي كلها والله ومقدرش ابعد عنك لحظه مقدرش اعملك وحش مقدرش ارفضلك طلب ولو رفضت اعرفي ان الطلب الي بتطلبي دا في ضرر ليكي عشان كدا رفضه فا بحبكككك اوي بجد وربنا يخليكي ليا يا اغلي حد في حياتي وميحرمنيش منك ابدا ربنا يخليلي خفة دمك وهبلك وزعلك مني لما اضايقك ربنا يخليلي كل تفصيله ربنا يخليلي حنيتك ورومانسيتك وكلامك الحلو ربنا يخليلي تعلقك بيا وحبك ليا وانا بحبككك وبموووت فيكي اكتر والله بجدددد وعددد مني قسما بالله ما حد ياخدك غيري انتي بتاعتي فاهمه يعني لو هموت نفسي عشان نبقا في بيت واحد هعمل كدا ومهما كان اه لسه بدري بس انا البدري دا هفضل اعدو بلثواني وبلحظات وبلدقايق لاني خلاص انتي علي رأي المثل مراتي بس سايبك عند ماما بس تتسلي شويه بمووووت فيكي يا بتتتت وبعشقكككك وربنا ميحرمنننني منك ولا من اي حاجه بتعمليها ابدااا بعشقكككك يا بنوتي وكل عمري ✨🙈\n\nyou are my wife 👩‍❤️‍👨✨\n\nyou are my life ❤️‍🔥💫";
 
-  // تنسيق النص ليغطي كامل الصورة
-  loveMessage.style.position = "absolute"; // جعل النص في مكان معين في الصفحة
-  loveMessage.style.top = "0"; // وضع النص بداية من أعلى الصفحة
-  loveMessage.style.left = "0"; // وضع النص بداية من اليسار
-  loveMessage.style.right = "0"; // تمديد النص حتى اليمين
-  loveMessage.style.bottom = "0"; // تمديد النص حتى الأسفل
-  loveMessage.style.fontSize = "50px"; // تغيير حجم الخط ليغطي المساحة
-  loveMessage.style.color = "white"; // تغيير لون النص إلى الأبيض ليتناسب مع الخلفية
-  loveMessage.style.fontFamily = "Arial, sans-serif"; // تعيين نوع الخط
-  loveMessage.style.textAlign = "center"; // محاذاة النص في المنتصف
+  // إزالة الخلفية وتغيير التصميم إلى وردي شفاف وأنيق
+  loveMessage.style.backgroundColor = "rgba(255, 192, 203, 0.7)"; // اللون الوردي الشفاف
+  loveMessage.style.borderRadius = "15px";
   loveMessage.style.padding = "20px";
-  loveMessage.style.borderRadius = "10px"; // جعل النص داخل مربع مع حواف مدورة
-  loveMessage.style.backgroundColor = "rgba(0, 0, 0, 0.6)"; // إضافة خلفية داكنة للنص لزيادة وضوحه
-  loveMessage.style.display = "flex";
+  loveMessage.style.color = "white"; // تغيير النص إلى اللون الأبيض
+  loveMessage.style.fontSize = "24px";
+  loveMessage.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
+  loveMessage.style.height = "70vh"; // تحديد ارتفاع ثابت نسبي
+  loveMessage.style.maxWidth = "90%"; // تحديد عرض أقصى للعنصر
+  loveMessage.style.display = "flex"; // استخدام flexbox
   loveMessage.style.flexDirection = "column"; // ترتيب النص بشكل عمودي
-  loveMessage.style.alignItems = "center"; // محاذاة النص في المنتصف
-  loveMessage.style.justifyContent = "center"; // محاذاة العناصر
-  loveMessage.style.overflow = "hidden"; // منع النص من الخروج من الحدود
+  loveMessage.style.alignItems = "center"; // محاذاة العناصر
+  loveMessage.style.justifyContent = "center"; // محاذاة النص في المنتصف
+  loveMessage.style.boxShadow = "0px 0px 20px rgba(255, 105, 180, 0.8)"; // تأثير الظل الناعم
 
-  document.body.appendChild(loveMessage); // إضافة النص إلى الصفحة
+  document.body.appendChild(loveMessage);
+  loveMessage.style.display = 'block';
 });
 
-// وظيفة الفقاعات (إذا كنت ترغب في الاحتفاظ بها)
+// وظيفة الفقاعات
 function createBubble(message) {
   const bubble = document.createElement('div');
   bubble.classList.add('bubble');
@@ -53,19 +45,20 @@ function createBubble(message) {
   msgElement.classList.add('message-popup');
   msgElement.innerHTML = message;
 
-  // تعيين الخلفية المطلوبة للنافذة المنبثقة
-  msgElement.style.backgroundImage = "url('https://i.ibb.co/x7Pbt6L/Screenshot.jpg')";
-  msgElement.style.backgroundSize = "cover";
-  msgElement.style.backgroundPosition = "center";
-  msgElement.style.borderRadius = "10px";
+  // تصميم الفقاعة (بخلفية وردية شفافة)
+  msgElement.style.backgroundColor = "rgba(255, 192, 203, 0.7)"; // اللون الوردي الشفاف
+  msgElement.style.borderRadius = "15px";
   msgElement.style.padding = "10px";
-  msgElement.style.color = "black"; // تغيير النص إلى اللون الأسود
+  msgElement.style.color = "white"; // تغيير النص إلى اللون الأبيض
+  msgElement.style.fontSize = "18px";
+  msgElement.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
   msgElement.style.height = "auto"; // جعل ارتفاع النافذة المنبثقة يتكيف مع النص
   msgElement.style.maxWidth = "90%"; // تحديد عرض أقصى للنافذة المنبثقة
   msgElement.style.display = "flex"; // استخدام flexbox
   msgElement.style.flexDirection = "column"; // ترتيب النص بشكل عمودي
   msgElement.style.alignItems = "center"; // محاذاة النص في المنتصف
   msgElement.style.justifyContent = "center"; // محاذاة العناصر
+  msgElement.style.boxShadow = "0px 0px 15px rgba(255, 105, 180, 0.7)"; // تأثير الظل الناعم
 
   bubble.addEventListener('click', () => {
     // تأثير السحب والتشفط
