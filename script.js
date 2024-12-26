@@ -20,15 +20,18 @@ blackhole.addEventListener('click', () => {
   loveMessage.style.borderRadius = "15px";
   loveMessage.style.padding = "20px";
   loveMessage.style.color = "white"; // تغيير النص إلى اللون الأبيض
-  loveMessage.style.fontSize = "24px";
+  loveMessage.style.fontSize = "5vw"; // استخدام وحدة VW لتناسب الشاشات الصغيرة
   loveMessage.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
-  loveMessage.style.height = "70vh"; // تحديد ارتفاع ثابت نسبي
+  loveMessage.style.height = "auto"; // تعيين الارتفاع بناءً على المحتوى
   loveMessage.style.maxWidth = "90%"; // تحديد عرض أقصى للعنصر
+  loveMessage.style.width = "auto"; // التأكد من أن العنصر مرن
   loveMessage.style.display = "flex"; // استخدام flexbox
   loveMessage.style.flexDirection = "column"; // ترتيب النص بشكل عمودي
   loveMessage.style.alignItems = "center"; // محاذاة العناصر
   loveMessage.style.justifyContent = "center"; // محاذاة النص في المنتصف
   loveMessage.style.boxShadow = "0px 0px 20px rgba(255, 105, 180, 0.8)"; // تأثير الظل الناعم
+  loveMessage.style.wordWrap = "break-word"; // السماح بلف النص
+  loveMessage.style.overflowWrap = "break-word"; // إضافة خاصية التأثير المماثل
 
   document.body.appendChild(loveMessage);
   loveMessage.style.display = 'block';
@@ -50,15 +53,18 @@ function createBubble(message) {
   msgElement.style.borderRadius = "15px";
   msgElement.style.padding = "10px";
   msgElement.style.color = "white"; // تغيير النص إلى اللون الأبيض
-  msgElement.style.fontSize = "18px";
+  msgElement.style.fontSize = "4vw"; // استخدام وحدة VW لتناسب الشاشات الصغيرة
   msgElement.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
   msgElement.style.height = "auto"; // جعل ارتفاع النافذة المنبثقة يتكيف مع النص
   msgElement.style.maxWidth = "90%"; // تحديد عرض أقصى للنافذة المنبثقة
+  msgElement.style.width = "auto"; // التأكد من أن العنصر مرن
   msgElement.style.display = "flex"; // استخدام flexbox
   msgElement.style.flexDirection = "column"; // ترتيب النص بشكل عمودي
   msgElement.style.alignItems = "center"; // محاذاة النص في المنتصف
   msgElement.style.justifyContent = "center"; // محاذاة العناصر
   msgElement.style.boxShadow = "0px 0px 15px rgba(255, 105, 180, 0.7)"; // تأثير الظل الناعم
+  msgElement.style.wordWrap = "break-word"; // السماح بلف النص
+  msgElement.style.overflowWrap = "break-word"; // إضافة خاصية التأثير المماثل
 
   bubble.addEventListener('click', () => {
     // تأثير السحب والتشفط
