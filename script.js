@@ -51,7 +51,7 @@ blackhole.addEventListener('click', () => {
 
   // تصميم النافذة المنبثقة لتأخذ 70% من الشاشة
   loveMessage.style.backgroundColor = "rgba(0, 0, 0, 0.8)"; // خلفية مظلمة
-  loveMessage.style.color = "white"; // لون النص أبيض
+  loveMessage.style.color = "red"; // لون النص أبيض
   loveMessage.style.borderRadius = "0"; // إزالة الحواف المدورة
   loveMessage.style.padding = "20px";
   loveMessage.style.width = "70%"; // عرض النافذة 70% من الشاشة
