@@ -4,7 +4,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>مفاجأة لحبيبتي</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #fff;
+      overflow: hidden;
+    }
+    
+    .bubble-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+
+    .blackhole {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .click-text {
+      font-size: 3rem;
+      font-weight: bold;
+      color: rgb(255, 0, 0);
+      animation: colorChange 3s infinite;
+    }
+
+    @keyframes colorChange {
+      0% {
+        color: rgb(255, 105, 180); /* Pink */
+      }
+      33% {
+        color: rgb(255, 0, 0); /* Red */
+      }
+      66% {
+        color: rgb(139, 0, 139); /* Dark Pink */
+      }
+      100% {
+        color: rgb(255, 105, 180); /* Pink */
+      }
+    }
+
+    .message-popup {
+      display: none;
+      font-size: 2rem;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      animation: showPopup 1s forwards;
+    }
+
+    @keyframes showPopup {
+      0% {
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(-50%);
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="bubble-container"></div>
@@ -13,6 +85,11 @@
   </div>
   <div class="message-popup">أحبك</div>
 
-  <script src="script.js"></script>
+  <script>
+    // إظهار رسالة "أحبك" بعد 2 ثانية
+    setTimeout(function() {
+      document.querySelector('.message-popup').style.display = 'block';
+    }, 2000);
+  </script>
 </body>
 </html>
