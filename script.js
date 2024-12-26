@@ -6,11 +6,25 @@ const container = document.querySelector('.bubble-container');
 const blackhole = document.querySelector('.blackhole');
 const body = document.querySelector('body');
 
+// لتخزين العناصر التي تم إخفاؤها
+let hiddenElements = [];
+
 // تأثير الثقب الأسود
 blackhole.addEventListener('click', () => {
   // إخفاء جميع العناصر باستثناء نافذة المنبثقة
-  document.body.innerHTML = '';
+  hiddenElements = []; // إعادة تعيين العناصر المخفية
   
+  // تخزين العناصر الموجودة في الصفحة قبل إخفائها
+  const allElements = document.body.children;
+  for (let i = 0; i < allElements.length; i++) {
+    hiddenElements.push(allElements[i]);
+  }
+
+  // إخفاء العناصر باستثناء نافذة المنبثقة
+  for (let i = 0; i < hiddenElements.length; i++) {
+    hiddenElements[i].style.display = 'none';
+  }
+
   // إنشاء نافذة منبثقة جديدة لعرض النص
   const loveMessage = document.createElement('div');
   loveMessage.classList.add('popup');
@@ -50,6 +64,11 @@ blackhole.addEventListener('click', () => {
   // إضافة حدث للإغلاق عند النقر على علامة الخروج
   exitButton.addEventListener('click', () => {
     loveMessage.remove(); // إزالة النافذة عند النقر على علامة الخروج
+
+    // إعادة إظهار جميع العناصر التي تم إخفاؤها
+    for (let i = 0; i < hiddenElements.length; i++) {
+      hiddenElements[i].style.display = ''; // استعادة العرض الأصلي
+    }
   });
 
   // إضافة علامة الخروج إلى النافذة
