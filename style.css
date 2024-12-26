@@ -21,8 +21,8 @@ body {
 
 .bubble {
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 15vw; /* تغيير الحجم ليكون مناسبًا للأجهزة المحمولة */
+  height: 15vw; /* نفس الشيء هنا */
   background-image: url('https://i.ibb.co/qCZSfJh/copilot-image-1735168048744.jpg');
   background-size: cover;
   background-position: center;
@@ -56,10 +56,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 18px;
+  font-size: 16px; /* تقليص حجم النص ليناسب الشاشات الصغيرة */
   color: #fff;
   background-color: rgba(255, 64, 129, 0.9);
-  padding: 20px 40px;
+  padding: 15px 30px;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   opacity: 0;
@@ -71,8 +71,8 @@ body {
 
 .blackhole {
   position: absolute;
-  width: 120px;
-  height: 120px;
+  width: 20vw; /* تغيير الحجم ليكون مناسبًا للأجهزة المحمولة */
+  height: 20vw;
   background-image: url('https://i.ibb.co/FqYtysW/copilot-image-1735167622550.jpg');
   background-size: cover;
   background-position: center;
@@ -81,7 +81,7 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   z-index: 10;
@@ -89,7 +89,7 @@ body {
 }
 
 .blackhole .click-text {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   color: white;
   position: absolute;
@@ -121,10 +121,10 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(255, 64, 129, 0.9);
-  padding: 30px;
+  padding: 20px;
   border-radius: 10px;
   text-align: center;
-  font-size: 24px;
+  font-size: 18px; /* تعديل الحجم ليكون مناسبًا للأجهزة الصغيرة */
   color: #fff;
   display: none;
   z-index: 999;
