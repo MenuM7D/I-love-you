@@ -36,6 +36,25 @@ blackhole.addEventListener('click', () => {
   loveMessage.style.transform = "translate(-50%, -50%)"; // التأكد من أن النافذة في المنتصف تمامًا
   loveMessage.style.zIndex = "1000"; // التأكد من أن النافذة فوق باقي العناصر
 
+  // إنشاء علامة الخروج (X)
+  const exitButton = document.createElement('div');
+  exitButton.innerText = 'X';
+  exitButton.style.position = 'absolute';
+  exitButton.style.top = '10px';
+  exitButton.style.right = '10px';
+  exitButton.style.color = 'white';
+  exitButton.style.fontSize = '30px';
+  exitButton.style.cursor = 'pointer';
+  exitButton.style.zIndex = '1001'; // التأكد من أن زر الخروج فوق النافذة
+
+  // إضافة حدث للإغلاق عند النقر على علامة الخروج
+  exitButton.addEventListener('click', () => {
+    loveMessage.remove(); // إزالة النافذة عند النقر على علامة الخروج
+  });
+
+  // إضافة علامة الخروج إلى النافذة
+  loveMessage.appendChild(exitButton);
+
   document.body.appendChild(loveMessage);
   loveMessage.style.display = 'block'; // جعل النافذة مرئية
 });
