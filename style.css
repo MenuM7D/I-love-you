@@ -15,24 +15,23 @@ body {
 .click-text {
   font-size: 24px; /* تكبير حجم النص */
   font-weight: bold;
-  background: linear-gradient(45deg, rgb(255, 0, 128), rgb(255, 105, 180), rgb(255, 182, 193)); /* ألوان دافئة على شكل تدرج */
-  -webkit-background-clip: text;
-  color: transparent; /* جعل اللون قابل للشفافية لتفعيل التدرج */
+  background: linear-gradient(45deg, rgb(255, 0, 128), rgb(255, 105, 180), rgb(255, 182, 193)); /* تدرج لوني من ألوان الحب */
+  background-clip: text;
+  color: transparent; /* جعل النص شفاف لتمكين رؤية التدرج اللوني */
   animation: loveColors 3s infinite alternate; /* إضافة تأثير متحرك للألوان */
 }
 
 @keyframes loveColors {
   0% {
-    background: linear-gradient(45deg, rgb(255, 0, 128), rgb(255, 105, 180));
+    color: rgb(255, 0, 128); /* اللون الأحمر */
   }
   50% {
-    background: linear-gradient(45deg, rgb(255, 20, 147), rgb(255, 182, 193));
+    color: rgb(255, 105, 180); /* اللون الوردي */
   }
   100% {
-    background: linear-gradient(45deg, rgb(255, 105, 180), rgb(255, 0, 128));
+    color: rgb(255, 182, 193); /* اللون الفاتح */
   }
 }
-
 .bubble-container {
   position: relative;
   width: 100%;
