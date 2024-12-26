@@ -15,23 +15,24 @@ blackhole.addEventListener('click', () => {
   loveMessage.classList.add('popup');
   loveMessage.innerText = "احم احم بصي يا اغلي ما ليا يا احلي بنوته واحلي ماما واحلي بيست واحلي حبيبه واحلل كل حاجه حرفيا انا عملت الموقع دا عشان افاجئك بي يعني هو كلو عل بعضو عملو كمفاجئه قولت استغل بقا ام النا بتعلمه دا في حاجه تفرح حد بحبه بدل الهبل الي مش جايبلي منها حاجه دا المهم بموت فيكي يا بت يارب يعجبك عشان بجد انا مش عامله بمجهود ولا حاجه انا عملو بقلبي عشان عايز اقولق واوصلك من خلاله اني بحبك موت ومقدرش اعيش من غيرك ومهما غيبت عليكي في يوم اعرفي ان دي حاجه غصبن عني اصلا مش بأيدي بجد عمري ما هتخلي عنك في يوم ولا هبعد عنك انتي قبل متكوني حبيبتي انتي حياتي كلها والله ومقدرش ابعد عنك لحظه مقدرش اعملك وحش مقدرش ارفضلك طلب ولو رفضت اعرفي ان الطلب الي بتطلبي دا في ضرر ليكي عشان كدا رفضه فا بحبكككك اوي بجد وربنا يخليكي ليا يا اغلي حد في حياتي وميحرمنيش منك ابدا ربنا يخليلي خفة دمك وهبلك وزعلك مني لما اضايقك ربنا يخليلي كل تفصيله ربنا يخليلي حنيتك ورومانسيتك وكلامك الحلو ربنا يخليلي تعلقك بيا وحبك ليا وانا بحبككك وبموووت فيكي اكتر والله بجدددد وعددد مني قسما بالله ما حد ياخدك غيري انتي بتاعتي فاهمه يعني لو هموت نفسي عشان نبقا في بيت واحد هعمل كدا ومهما كان اه لسه بدري بس انا البدري دا هفضل اعدو بلثواني وبلحظات وبلدقايق لاني خلاص انتي علي رأي المثل مراتي بس سايبك عند ماما بس تتسلي شويه بمووووت فيكي يا بتتتت وبعشقكككك وربنا ميحرمنننني منك ولا من اي حاجه بتعمليها ابدااا بعشقكككك يا بنوتي وكل عمري ✨🙈\n\nyou are my wife 👩‍❤️‍👨✨\n\nyou are my life ❤️‍🔥💫";
 
-  // إزالة الخلفية وتغيير التصميم إلى وردي شفاف وأنيق
+  // إزالة الخلفية وتحويل النافذة المنبثقة لتغطي الشاشة بالكامل
+  loveMessage.style.position = "fixed"; // جعل النافذة مثبتة على الشاشة
+  loveMessage.style.top = "0";
+  loveMessage.style.left = "0";
+  loveMessage.style.width = "100%"; // تغطية كامل العرض
+  loveMessage.style.height = "100%"; // تغطية كامل الارتفاع
   loveMessage.style.backgroundColor = "rgba(255, 192, 203, 0.7)"; // اللون الوردي الشفاف
-  loveMessage.style.borderRadius = "15px";
-  loveMessage.style.padding = "20px";
   loveMessage.style.color = "white"; // تغيير النص إلى اللون الأبيض
-  loveMessage.style.fontSize = "5vw"; // استخدام وحدة VW لتناسب الشاشات الصغيرة
+  loveMessage.style.fontSize = "5vw"; // حجم النص بشكل مرن مع العرض
   loveMessage.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
-  loveMessage.style.height = "auto"; // تعيين الارتفاع بناءً على المحتوى
-  loveMessage.style.maxWidth = "90%"; // تحديد عرض أقصى للعنصر
-  loveMessage.style.width = "auto"; // التأكد من أن العنصر مرن
-  loveMessage.style.display = "flex"; // استخدام flexbox
-  loveMessage.style.flexDirection = "column"; // ترتيب النص بشكل عمودي
-  loveMessage.style.alignItems = "center"; // محاذاة العناصر
-  loveMessage.style.justifyContent = "center"; // محاذاة النص في المنتصف
+  loveMessage.style.display = "flex";
+  loveMessage.style.flexDirection = "column";
+  loveMessage.style.alignItems = "center";
+  loveMessage.style.justifyContent = "center";
   loveMessage.style.boxShadow = "0px 0px 20px rgba(255, 105, 180, 0.8)"; // تأثير الظل الناعم
   loveMessage.style.wordWrap = "break-word"; // السماح بلف النص
   loveMessage.style.overflowWrap = "break-word"; // إضافة خاصية التأثير المماثل
+  loveMessage.style.overflow = "auto"; // السماح بالتمرير إذا كان النص طويلًا
 
   document.body.appendChild(loveMessage);
   loveMessage.style.display = 'block';
@@ -48,23 +49,24 @@ function createBubble(message) {
   msgElement.classList.add('message-popup');
   msgElement.innerHTML = message;
 
-  // تصميم الفقاعة (بخلفية وردية شفافة)
+  // تصميم الفقاعة (بدون خلفية)
+  msgElement.style.position = "fixed"; // جعل النافذة المنبثقة مثبتة
+  msgElement.style.top = "0";
+  msgElement.style.left = "0";
+  msgElement.style.width = "100%"; // تغطي كامل العرض
+  msgElement.style.height = "100%"; // تغطي كامل الارتفاع
   msgElement.style.backgroundColor = "rgba(255, 192, 203, 0.7)"; // اللون الوردي الشفاف
-  msgElement.style.borderRadius = "15px";
-  msgElement.style.padding = "10px";
   msgElement.style.color = "white"; // تغيير النص إلى اللون الأبيض
-  msgElement.style.fontSize = "4vw"; // استخدام وحدة VW لتناسب الشاشات الصغيرة
+  msgElement.style.fontSize = "5vw"; // حجم النص بشكل مرن مع العرض
   msgElement.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
-  msgElement.style.height = "auto"; // جعل ارتفاع النافذة المنبثقة يتكيف مع النص
-  msgElement.style.maxWidth = "90%"; // تحديد عرض أقصى للنافذة المنبثقة
-  msgElement.style.width = "auto"; // التأكد من أن العنصر مرن
-  msgElement.style.display = "flex"; // استخدام flexbox
-  msgElement.style.flexDirection = "column"; // ترتيب النص بشكل عمودي
-  msgElement.style.alignItems = "center"; // محاذاة النص في المنتصف
-  msgElement.style.justifyContent = "center"; // محاذاة العناصر
-  msgElement.style.boxShadow = "0px 0px 15px rgba(255, 105, 180, 0.7)"; // تأثير الظل الناعم
+  msgElement.style.display = "flex";
+  msgElement.style.flexDirection = "column";
+  msgElement.style.alignItems = "center";
+  msgElement.style.justifyContent = "center";
+  msgElement.style.boxShadow = "0px 0px 20px rgba(255, 105, 180, 0.8)"; // تأثير الظل الناعم
   msgElement.style.wordWrap = "break-word"; // السماح بلف النص
   msgElement.style.overflowWrap = "break-word"; // إضافة خاصية التأثير المماثل
+  msgElement.style.overflow = "auto"; // السماح بالتمرير إذا كان النص طويلًا
 
   bubble.addEventListener('click', () => {
     // تأثير السحب والتشفط
