@@ -49,7 +49,7 @@ function createBubble(message) {
   msgElement.innerHTML = message;
 
   // تعيين الخلفية المطلوبة للنافذة المنبثقة
-  msgElement.style.backgroundImage = "url('https://i.ibb.co/FbQQcy6/IMG.jpg')";
+  msgElement.style.backgroundImage = "url('https://i.ibb.co/x7Pbt6L/Screenshot.jpg')";
   msgElement.style.backgroundSize = "cover";
   msgElement.style.backgroundPosition = "center";
   msgElement.style.borderRadius = "10px";
