@@ -16,8 +16,14 @@ const container = document.querySelector('.bubble-container');
 const blackhole = document.querySelector('.blackhole');
 const body = document.querySelector('body');
 
+let allBubblesOpened = false;  // متغير لتتبع حالة الفقاعات
+
 // تأثير الثقب الأسود
 blackhole.addEventListener('click', () => {
+  if (!allBubblesOpened) {
+    return; // لا يتم فتح الثقب الأسود إلا بعد فتح كل الفقاعات
+  }
+
   document.body.innerHTML = '';
   body.style.backgroundImage = "url('https://i.ibb.co/jRKqCJT/copilot-image-1735083971598.jpg')";
 
@@ -41,8 +47,24 @@ blackhole.addEventListener('click', () => {
 function createBubble(message) {
   const bubble = document.createElement('div');
   bubble.classList.add('bubble');
-  bubble.style.top = Math.random() * 90 + '%';
-  bubble.style.left = Math.random() * 90 + '%';
+
+  // حساب مكان الفقاعة بحيث لا تتداخل مع الثقب الأسود
+  let top = Math.random() * 90 + '%';
+  let left = Math.random() * 90 + '%';
+
+  const blackholeRect = blackhole.getBoundingClientRect();
+  const bubbleRect = { top: parseFloat(top), left: parseFloat(left) };
+
+  // التأكد من أن الفقاعة لا تقع في منطقة الثقب الأسود
+  while (Math.abs(blackholeRect.top - bubbleRect.top) < 100 && Math.abs(blackholeRect.left - bubbleRect.left) < 100) {
+    top = Math.random() * 90 + '%';
+    left = Math.random() * 90 + '%';
+    bubbleRect.top = parseFloat(top);
+    bubbleRect.left = parseFloat(left);
+  }
+
+  bubble.style.top = top;
+  bubble.style.left = left;
 
   const msgElement = document.createElement('div');
   msgElement.classList.add('message-popup');
@@ -81,6 +103,12 @@ function createBubble(message) {
     }, 2500);
 
     container.appendChild(msgElement);
+
+    // التحقق إذا تم فتح كل الفقاعات
+    const remainingBubbles = document.querySelectorAll('.bubble').length;
+    if (remainingBubbles === 0) {
+      allBubblesOpened = true;
+    }
   });
 
   container.appendChild(bubble);
