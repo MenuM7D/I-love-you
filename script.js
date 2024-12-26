@@ -19,14 +19,14 @@ const body = document.querySelector('body');
 // تأثير الثقب الأسود
 blackhole.addEventListener('click', () => {
   document.body.innerHTML = '';
-  body.style.backgroundImage = "url('https://i.ibb.co/jRKqCJT/copilot-image-1735083971598.jpg')";
+  body.style.backgroundImage = "url('https://i.ibb.co/x7Pbt6L/Screenshot.jpg')";
 
   const loveMessage = document.createElement('div');
   loveMessage.classList.add('popup');
   loveMessage.innerText = "أحبك";
 
   // تعيين الخلفية نفسها وتغيير اللون للنص إلى الأسود
-  loveMessage.style.backgroundImage = "url('https://i.ibb.co/FbQQcy6/IMG.jpg')";
+  loveMessage.style.backgroundImage = "url('https://i.ibb.co/x7Pbt6L/Screenshot.jpg')";
   loveMessage.style.backgroundSize = "cover";
   loveMessage.style.backgroundPosition = "center";
   loveMessage.style.borderRadius = "10px";
