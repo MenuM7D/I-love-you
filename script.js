@@ -109,18 +109,17 @@ function createBubble(message) {
   msgElement.innerHTML = message;
 
   // تعيين الخلفية المطلوبة للنافذة المنبثقة
-  msgElement.style.backgroundImage = "url('https://i.ibb.co/zsJXD0k/Screenshot.jpg')";
-  msgElement.style.backgroundSize = "cover";
-  msgElement.style.backgroundPosition = "center";
-  msgElement.style.borderRadius = "10px";
-  msgElement.style.padding = "10px";
-  msgElement.style.color = "black"; // تغيير النص إلى اللون الأسود
-  msgElement.style.height = "auto"; // جعل ارتفاع النافذة المنبثقة يتكيف مع النص
-  msgElement.style.maxWidth = "90%"; // تحديد عرض أقصى للنافذة المنبثقة
-  msgElement.style.display = "flex"; // استخدام flexbox
-  msgElement.style.flexDirection = "column"; // ترتيب النص بشكل عمودي
-  msgElement.style.alignItems = "center"; // محاذاة النص في المنتصف
-  msgElement.style.justifyContent = "center"; // محاذاة العناصر
+  msgElement.style.backgroundColor = "rgba(0, 0, 0, 0.5)"; // لون أسود شفاف
+msgElement.style.backgroundImage = "none"; // إزالة الصورة الخلفية
+msgElement.style.borderRadius = "10px";
+msgElement.style.padding = "10px";
+msgElement.style.color = "red"; // تغيير النص إلى اللون الأبيض ليتناسب مع الخلفية السوداء
+msgElement.style.height = "auto"; // جعل ارتفاع النافذة المنبثقة يتكيف مع النص
+msgElement.style.maxWidth = "90%"; // تحديد عرض أقصى للنافذة المنبثقة
+msgElement.style.display = "flex"; // استخدام flexbox
+msgElement.style.flexDirection = "column"; // ترتيب النص بشكل عمودي
+msgElement.style.alignItems = "center"; // محاذاة النص في المنتصف
+msgElement.style.justifyContent = "center"; // محاذاة العناصر
 
   bubble.addEventListener('click', () => {
     // تأثير السحب والتشفط
